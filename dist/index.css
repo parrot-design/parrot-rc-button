@@ -1,0 +1,193 @@
+@import '@parrotjs/react-loading/dist/index.css';
+@import '@parrotjs/react-ripple/dist/index.css';
+.parrot-button {
+  user-select: none;
+  outline: none;
+  position: relative;
+  text-decoration: none;
+  text-align: center;
+  border: none;
+  white-space: nowrap;
+  font-weight: 500;
+  line-height: 1.5;
+  text-transform: uppercase;
+  border-radius: 4px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+.parrot-button-default {
+  height: 36px;
+  padding: 0 16px;
+  font-size: 14px;
+  min-width: 64px;
+}
+.parrot-button-small {
+  height: 28px;
+  padding: 0 8px;
+  font-size: 12px;
+  min-width: 58px;
+}
+.parrot-button-large {
+  height: 44px;
+  padding: 0 32px;
+  font-size: 16px;
+  min-width: 70px;
+}
+.parrot-button-loading {
+  opacity: 0.8;
+}
+.parrot-button-type-contained {
+  box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+}
+.parrot-button-type-contained:active {
+  box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+}
+.parrot-button-color-contained-default {
+  color: rgba(0, 0, 0, 0.87);
+  background-color: #e0e0e0;
+}
+.parrot-button-color-contained-default:not(.parrot-button-loading):hover {
+  background-color: #c9c4c4;
+}
+.parrot-button-color-contained-primary {
+  color: #fff;
+  background-color: #00bdaa;
+}
+.parrot-button-color-contained-primary:not(.parrot-button-loading):hover {
+  background-color: #04998a;
+}
+.parrot-button-color-contained-danger {
+  color: #fff;
+  background-color: #f71f55;
+}
+.parrot-button-color-contained-danger:not(.parrot-button-loading):hover {
+  background-color: #b80935;
+}
+.parrot-button-color-contained-second {
+  color: #fff;
+  background-color: #400082;
+}
+.parrot-button-color-contained-second:not(.parrot-button-loading):hover {
+  background-color: #30005f;
+}
+.parrot-button-color-contained-warning {
+  color: #fff;
+  background-color: #f8b400;
+}
+.parrot-button-color-contained-warning:not(.parrot-button-loading):hover {
+  background-color: #d19a02;
+}
+.parrot-button-color-contained-success {
+  color: #fff;
+  background-color: #6bc600;
+}
+.parrot-button-color-contained-success:not(.parrot-button-loading):hover {
+  background-color: #478303;
+}
+.parrot-button-color-contained-info {
+  color: #fff;
+  background-color: #0779e4;
+}
+.parrot-button-color-contained-info:not(.parrot-button-loading):hover {
+  background-color: #0361b9;
+}
+.parrot-button-color-text-default {
+  color: rgba(0, 0, 0, 0.86);
+  background-color: #fff;
+}
+.parrot-button-color-text-default:not(.parrot-button-loading):hover {
+  background-color: #e0e0e0;
+}
+.parrot-button-color-text-primary {
+  color: #00bdaa;
+  background-color: #fff;
+}
+.parrot-button-color-text-primary:not(.parrot-button-loading):hover {
+  background-color: rgba(0, 189, 170, 0.1);
+}
+.parrot-button-color-text-danger {
+  color: #f71f55;
+  background-color: #fff;
+}
+.parrot-button-color-text-danger:not(.parrot-button-loading):hover {
+  background-color: rgba(247, 31, 85, 0.1);
+}
+.parrot-button-color-text-second {
+  color: #400082;
+  background-color: #fff;
+}
+.parrot-button-color-text-second:not(.parrot-button-loading):hover {
+  background-color: rgba(64, 0, 130, 0.1);
+}
+.parrot-button-color-text-warning {
+  color: #f8b400;
+  background-color: #fff;
+}
+.parrot-button-color-text-warning:not(.parrot-button-loading):hover {
+  background-color: rgba(248, 180, 0, 0.1);
+}
+.parrot-button-color-text-success {
+  color: #6bc600;
+  background-color: #fff;
+}
+.parrot-button-color-text-success:not(.parrot-button-loading):hover {
+  background-color: rgba(107, 198, 0, 0.1);
+}
+.parrot-button-color-text-info {
+  color: #0779e4;
+  background-color: #fff;
+}
+.parrot-button-color-text-info:not(.parrot-button-loading):hover {
+  background-color: rgba(7, 121, 228, 0.1);
+}
+.parrot-button-outline-default {
+  border: 1px solid rgba(0, 0, 0, 0.23);
+  padding: 5px 15px;
+}
+.parrot-button-outline-primary {
+  color: #00bdaa;
+  border: 1px solid #00bdaa;
+}
+.parrot-button-outline-second {
+  color: #400082;
+  border: 1px solid #400082;
+}
+.parrot-button-outline-warning {
+  color: #f8b400;
+  border: 1px solid #f8b400;
+}
+.parrot-button-outline-danger {
+  color: #f71f55;
+  border: 1px solid #f71f55;
+}
+.parrot-button-outline-success {
+  color: #6bc600;
+  border: 1px solid #6bc600;
+}
+.parrot-button-outline-info {
+  color: #0779e4;
+  border: 1px solid #0779e4;
+}
+.parrot-button-small.parrot-button-circle {
+  min-width: 24px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  padding: 0;
+  text-align: center;
+}
+.parrot-button-default.parrot-button-circle {
+  min-width: 32px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  padding: 0;
+  text-align: center;
+}
+.parrot-button-large.parrot-button-circle {
+  min-width: 40px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  padding: 0;
+  text-align: center;
+}

@@ -1,0 +1,148 @@
+@import '@parrotjs/rc-helper-class/src/index.scss'; 
+@import '@parrotjs/react-loading/dist/index.css'; 
+@import '@parrotjs/react-ripple/dist/index.css'; 
+@import 'mixin.scss';
+ 
+$prefixCls:"#{$global-prefixCls}-button";
+$prefixClsLoading:"#{$global-prefixCls}-button-loading";
+
+.#{$prefixCls}{
+    @include button();
+
+    &-loading{
+        opacity: 0.8; 
+    }
+
+    &-type-contained{
+        @include boxShadowLevel(2);
+
+        &:active{
+            @include boxShadowLevel(4);
+        }
+    }
+
+    &-color-contained-default{
+        @include button-color-default();
+    }
+
+    &-color-contained-primary{
+        @include button-color-primary();
+    }
+
+    &-color-contained-danger{
+        @include button-color-danger();
+    }
+
+    &-color-contained-second{
+        @include button-color-second();
+    }
+
+    &-color-contained-warning{
+        @include button-color-warning();
+    }
+
+    &-color-contained-success{
+        @include button-color-success();
+    }
+
+    &-color-contained-info{
+        @include button-color-info();
+    }
+ 
+
+    &-color-text-default{
+        @include button-color-default-text();
+    }
+
+    &-color-text-primary{
+        @include button-color-primary-text();
+    }
+
+    &-color-text-danger{
+        @include button-color-danger-text();
+    }
+
+    &-color-text-second{
+        @include button-color-second-text();
+    }
+
+    &-color-text-warning{
+        @include button-color-warning-text();
+    }
+
+    &-color-text-success{
+        @include button-color-success-text();
+    }
+
+    &-color-text-info{
+        @include button-color-info-text();
+    }
+
+    &-outline-default{
+        border: 1px solid rgba(0, 0, 0, 0.23);
+        padding: 5px 15px;
+    }
+
+    &-outline-primary{
+        color: $primary-color;
+        border: 1px solid $primary-color;
+    }
+
+    &-outline-second{
+        color: $second-color;
+        border: 1px solid $second-color;
+    }
+
+    &-outline-warning{
+        color: $warning-color;
+        border: 1px solid $warning-color;
+    }
+
+    &-outline-danger{
+        color: $danger-color;
+        border: 1px solid $danger-color;
+    }
+
+    &-outline-success{
+        color: $success-color;
+        border: 1px solid $success-color;
+    }
+
+    &-outline-info{
+        color: $info-color;
+        border: 1px solid $info-color;
+    }
+
+    &-small{
+        &.#{$prefixCls}-circle{
+            min-width: 24px;
+            width:24px;
+            height: 24px;
+            border-radius: 50%;
+            padding:0;
+            text-align: center;
+        }
+    }
+
+    &-default{
+        &.#{$prefixCls}-circle{
+            min-width: 32px;
+            width:32px;
+            height: 32px;
+            border-radius: 50%;
+            padding:0;
+            text-align: center;
+        }
+    }
+
+    &-large{
+        &.#{$prefixCls}-circle{
+            min-width: 40px;
+            width:40px;
+            height: 40px;
+            border-radius: 50%;
+            padding:0;
+            text-align: center;
+        }
+    }
+}

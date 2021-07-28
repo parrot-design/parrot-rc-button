@@ -1,0 +1,167 @@
+@import "./val.scss";
+
+@mixin buttonSize($height,$padding-vertical,$padding-horizontal,$font-size:"14px",$min-width:"64px"){//更换size
+    height:$height;
+    // line-height:$height;
+    padding:$padding-vertical $padding-horizontal;
+    font-size: $font-size;
+    min-width: $min-width;
+}
+ 
+
+
+@mixin button(){
+    user-select: none;
+    outline: none; 
+    position: relative;
+    text-decoration: none;
+    text-align: center;
+    border: none;
+    white-space: nowrap;
+    font-weight: 500;
+    line-height: 1.5;   
+    text-transform:uppercase;
+    border-radius: 4px;
+    transition:background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+
+    &-default{
+        @include buttonSize($button-default-height,0,16px,$button-default-font-size,$button-default-min-width);
+    }
+
+    &-small{
+        @include buttonSize($button-small-height,0 ,8px,$button-small-font-size,$button-small-min-width);
+    }
+    
+    &-large{
+        @include buttonSize($button-large-height,0 ,32px,$button-large-font-size,$button-large-min-width);
+    }
+
+}
+
+@mixin button-color-default(){
+    color:$global-text-color;
+    background-color: $default-color;
+
+    &:not(.#{$prefixClsLoading}):hover{
+        background-color: $default-color-hover;
+    }
+}
+
+@mixin button-color-primary(){
+    color:#fff;
+    background-color: $primary-color;
+
+    &:not(.#{$prefixClsLoading}):hover{
+        background-color: $primary-color-hover;
+    }
+}
+
+@mixin button-color-danger(){
+    color:#fff;
+    background-color: $danger-color;
+
+    &:not(.#{$prefixClsLoading}):hover{
+        background-color: $danger-color-hover;
+    }
+}
+
+@mixin button-color-second(){
+    color:#fff;
+    background-color: $second-color;
+
+    &:not(.#{$prefixClsLoading}):hover{
+        background-color: $second-color-hover;
+    }
+}
+
+@mixin button-color-warning(){
+    color:#fff;
+    background-color: $warning-color;
+
+    &:not(.#{$prefixClsLoading}):hover{
+        background-color: $warning-color-hover;
+    }
+}
+
+@mixin button-color-success(){
+    color:#fff;
+    background-color: $success-color;
+
+    &:not(.#{$prefixClsLoading}):hover{
+        background-color: $success-color-hover;
+    }
+}
+
+
+@mixin button-color-info(){
+    color:#fff;
+    background-color: $info-color;
+
+    &:not(.#{$prefixClsLoading}):hover{
+        background-color: $info-color-hover;
+    }
+}
+
+@mixin button-color-default-text(){
+    color:rgba(0,0,0,.86);
+    background-color: #fff;
+
+    &:not(.#{$prefixClsLoading}):hover{
+        @include OpacityDefaultColor(1);
+    }
+}
+
+@mixin button-color-primary-text(){
+    color:$primary-color;
+    background-color: #fff;
+
+    &:not(.#{$prefixClsLoading}):hover{
+        @include OpacityPrimaryColor(.1);
+    }
+}
+
+@mixin button-color-danger-text(){
+    color:$danger-color;
+    background-color: #fff;
+
+    &:not(.#{$prefixClsLoading}):hover{
+        @include OpacityDangerColor(.1);
+    }
+}
+
+@mixin button-color-second-text(){
+    color:$second-color;
+    background-color:#fff ;
+
+    &:not(.#{$prefixClsLoading}):hover{
+        @include OpacitySecondColor(.1);
+    }
+}
+
+@mixin button-color-warning-text(){
+    color:$warning-color;
+    background-color: #fff;
+
+    &:not(.#{$prefixClsLoading}):hover{
+        @include OpacityWarningColor(.1);
+    }
+}
+
+@mixin button-color-success-text(){
+    color:$success-color;
+    background-color: #fff;
+
+    &:not(.#{$prefixClsLoading}):hover{
+        @include OpacitySuccessColor(.1);
+    }
+}
+
+
+@mixin button-color-info-text(){
+    color:$info-color;
+    background-color: #fff;
+
+    &:not(.#{$prefixClsLoading}):hover{
+        @include OpacityInfoColor(.1);
+    }
+}
