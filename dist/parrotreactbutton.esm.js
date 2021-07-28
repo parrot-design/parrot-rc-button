@@ -31,7 +31,7 @@ function __rest(s, e) {
 }
 
 const Button = React.forwardRef((props, ref) => {
-    const { prefixCls: customizedPrefixCls = 'parrot', componentName = 'button', children, className, size = 'default', color = 'default', type = 'contained', shape = 'round', outline, loading, style } = props, restProps = __rest(props, ["prefixCls", "componentName", "children", "className", "size", "color", "type", "shape", "outline", "loading", "style"]);
+    const { prefixCls: customizedPrefixCls = 'parrot', componentName = 'button', children, className, size = 'default', color = 'default', type = 'contained', shape = 'round', outline, loading, style, onClick } = props, restProps = __rest(props, ["prefixCls", "componentName", "children", "className", "size", "color", "type", "shape", "outline", "loading", "style", "onClick"]);
     const prefixCls = customizedPrefixCls + '-' + componentName;
     return (React.createElement(Ripple, Object.assign({ className: classnames(prefixCls, className, {
             [`${prefixCls}-${size}`]: size,
@@ -40,7 +40,7 @@ const Button = React.forwardRef((props, ref) => {
             [`${prefixCls}-${shape}`]: shape,
             [`${prefixCls}-outline-${color}`]: color && outline,
             [`${prefixCls}-loading`]: loading
-        }), style: style, disableTouchRipple: loading, ref: ref, component: 'button' }, restProps),
+        }), style: style, disableTouchRipple: loading, ref: ref, component: 'button', onClick: onClick }, restProps),
         loading && React.createElement(Loading, { size: 18, style: { marginRight: 6 }, color: color }),
         children));
 });

@@ -14,4 +14,5 @@ export interface IButtonProps{
     shape?:'circle'|'round';
     loading?:boolean;
     style?:React.CSSProperties;
+    onClick?:any;
 } 

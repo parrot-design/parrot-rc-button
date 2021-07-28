@@ -19,6 +19,7 @@ const Button=React.forwardRef((props:IButtonProps,ref)=>{
         outline,
         loading,
         style,
+        onClick,
         ...restProps
     }=props;
 
@@ -42,6 +43,7 @@ const Button=React.forwardRef((props:IButtonProps,ref)=>{
             disableTouchRipple={loading}
             ref={ref}
             component={'button'}
+            onClick={onClick}
             {...restProps}
         >
             {loading && <Loading size={18} style={{marginRight:6}} color={color} />}
