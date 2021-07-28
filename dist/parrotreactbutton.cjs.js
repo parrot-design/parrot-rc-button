@@ -50,7 +50,7 @@ const Button = React__default['default'].forwardRef((props, ref) => {
             [`${prefixCls}-outline-${color}`]: color && outline,
             [`${prefixCls}-loading`]: loading
         }), style: style, disableTouchRipple: loading, ref: ref, component: 'button', onClick: onClick }, restProps),
-        loading && React__default['default'].createElement(Loading__default['default'], { size: 18, style: { marginRight: 6 }, color: color }),
+        loading && React__default['default'].createElement(Loading__default['default'], { size: 18, style: { marginRight: 6 }, color: 'inherit' }),
         children));
 });
 var Button$1 = React__default['default'].memo(Button);

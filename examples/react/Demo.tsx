@@ -5,7 +5,7 @@ import "./index.css";
 const Demo=()=>{
     return (
         <div> 
-            <Button color='primary'>Default</Button> 
+            <Button color='info'>Default</Button> 
         </div>
     )
 }

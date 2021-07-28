@@ -46,7 +46,7 @@ const Button=React.forwardRef((props:IButtonProps,ref)=>{
             onClick={onClick}
             {...restProps}
         >
-            {loading && <Loading size={18} style={{marginRight:6}} color={color} />}
+            {loading && <Loading size={18} style={{marginRight:6}} color={'inherit'} />}
             {children}
         </Ripple>
     )

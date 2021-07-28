@@ -51,7 +51,7 @@
   },
   "dependencies": {
     "@parrotjs/classnames": "^2.0.2",
-    "@parrotjs/react-loading": "0.0.2",
+    "@parrotjs/react-loading": "0.0.3",
     "@parrotjs/react-ripple": "^1.0.4"
   },
   "peerDependencies": {

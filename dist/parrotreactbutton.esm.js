@@ -41,7 +41,7 @@ const Button = React.forwardRef((props, ref) => {
             [`${prefixCls}-outline-${color}`]: color && outline,
             [`${prefixCls}-loading`]: loading
         }), style: style, disableTouchRipple: loading, ref: ref, component: 'button', onClick: onClick }, restProps),
-        loading && React.createElement(Loading, { size: 18, style: { marginRight: 6 }, color: color }),
+        loading && React.createElement(Loading, { size: 18, style: { marginRight: 6 }, color: 'inherit' }),
         children));
 });
 var Button$1 = React.memo(Button);
